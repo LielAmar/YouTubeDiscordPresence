@@ -89,11 +89,16 @@ If you have suggestions for new features:
 
 ## Building
 
-Desktop application:
+Desktop application (Windows):
    - `npm run compile`
    - Replace the existing `YTDPwin.exe` in `C:\Program Files\YouTubeDiscordPresence` with the newly compiled one.
 
    - Building the `.msi`: Download **Visual Studio 2026** with the **Microsoft Visual Studio Installer Project** extension. Open `Host\YTDPwin\YTDPsetup\YTDPsetup.vdproj` and build `YTDPsetup`.
+
+Desktop application (macOS, Apple Silicon):
+   - `npm run compile:mac-arm64`
+   - Double click the file created at `src/YouTubeDiscordPresence-mac-arm64.pkg` and follow the installer wizard.
+   - The installer places the binary at `/Library/Application Support/YouTubeDiscordPresence/YTDPmac` and registers the native messaging host.
 
 Extension:
    - Download the `Extension` directory, compress it into a zip, and load it onto your browser manually.
